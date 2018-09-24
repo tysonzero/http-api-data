@@ -182,6 +182,8 @@ parseMaybeTextData parse input =
 -- Convert to URL piece using @'TextShow'@ instance.
 -- The result is always lower cased.
 --
+-- If you do not want lower casing try @'T.pack' . 'show'@
+--
 -- >>> showTextData True
 -- "true"
 --
@@ -203,6 +205,8 @@ showTextData = T.toLower . showt
 --
 -- Convert to URL piece using @'Show'@ instance.
 -- The result is always lower cased.
+--
+-- If you do not want lower casing try @'T.pack' . 'show'@
 --
 -- >>> showTextData True
 -- "true"
